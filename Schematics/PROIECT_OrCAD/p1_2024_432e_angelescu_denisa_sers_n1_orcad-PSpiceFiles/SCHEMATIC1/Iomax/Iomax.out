@@ -1,0 +1,179 @@
+
+**** 11/22/24 16:04:47 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Iomax"  [ C:\Users\denis\Desktop\P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD\Schematics\PROIECT_OrCAD\p1_202
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Iomax.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/denis/Desktop/P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD/Schematics/lib_modelepspice_anexa_1/modele_a1_lib/bc807-25"
++ ".lib" 
+.LIB "C:/Users/denis/Desktop/P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD/Schematics/lib_modelepspice_anexa_1/modele_a1_lib/bc846b.l"
++ "ib" 
+.LIB "C:/Users/denis/Desktop/P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD/Schematics/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c2v"
++ "7.lib" 
+* From [PSPICE NETLIST] section of C:\Users\denis\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN I_I1 0 1 0.001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source P1_2024_432E_ANGELESCU_DENISA_SERS_N1_ORCAD
+R_R1         N00707 N30997  22k TC=0,0 
+R_R5         N00296 N00866  1K TC=0,0 
+R_R8         0 N00895  100 TC=0,0 
+R_R10         N01010 N00296  33 TC=0,0 
+R_R11         N01014 N00296  33 TC=0,0 
+R_R16         N01103 N47246  1 TC=0,0 
+X_P1         N08738 N00707 N00707 POT PARAMS: SET=0 VALUE=10k
+R_R17         N09220 N08738  1k TC=0,0 
+R_R18         0 N09224  510 TC=0,0 
+X_P2         N09224 N09228 N09220 POT PARAMS: SET=0.8 VALUE=5k
+D_D2         0 N08738 BZX84-C2V7 
+Q_Q2          N01018 N00707 N00974 QBC846B 
+Q_Q1          N01051 N01073 N00974 QBC846B 
+Q_Q4          N00866 N00866 N00895 QBC846B 
+Q_Q10          N01051 N09228 0 QBC846B 
+Q_Q7          N01051 N01103 N01073 QBC846B 
+Q_Q8          N01085 N01051 N01103 QBC846B 
+Q_Q3         N00974 N00866 N26783 QBC846B 
+Q_Q5         N01051 N01018 N01014 QBC807-25 
+Q_Q6         N01018 N01018 N01010 QBC807-25 
+Q_Q9         N01103 N01085 N00296 QBC807-25 
+R_R20         0 N26783  22 TC=0,0 
+R_R26         N01073 0  1000k TC=0,0 
+R_R27         N01073 0  2000k TC=0,0 
+X_D3         N00296 N54444 LED PARAMS: IS=3.7602e-29 RS=1  BV=5 IBV=5e-6       
++   
+R_R28         N30997 0  2.7k TC=0,0 
+R_R29         N00296 N55538  100 TC=0,0 
+R_R32         N54444 0  68 TC=0,0 
+R_R33         N47246 N01073  1 TC=0,0 
+C_C1         0 N01073  100n  TC=0,0 
+V_V1         N00296 0 4
+R_R34         N55538 N08738  100 TC=0,0 
+I_I1         N01073 0 DC 1Adc  
+D_D4         0 N01073 Dbreak 
+
+**** RESUMING Iomax.cir ****
+.END
+
+**** 11/22/24 16:04:47 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Iomax"  [ C:\Users\denis\Desktop\P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD\Schematics\PROIECT_OrCAD\p1_202
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BZX84-C2V7      Dbreak          X_D3.model201   
+          IS  110.880000E-18   10.000000E-15   37.602000E-30 
+           N     .92657                         2            
+         ISR    1.515900E-06                                 
+         IKF  147.68                                         
+          BV    2.7639                          5            
+         IBV     .06977                         5.000000E-06 
+          RS     .85899          .1             1            
+          TT   17.889000E-09                                 
+         CJO  344.690000E-12  100.000000E-15                 
+          VJ     .72935                                      
+           M     .31964                                      
+
+
+**** 11/22/24 16:04:47 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Iomax"  [ C:\Users\denis\Desktop\P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD\Schematics\PROIECT_OrCAD\p1_202
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC807-25       QBC846B         
+               PNP             NPN             
+       LEVEL    1               1            
+          IS  108.000000E-15   18.220000E-15 
+          BF  385.7           324.4          
+          NF     .99             .9932       
+         VAF   31.29           82            
+         IKF     .3603           .109        
+         ISE   27.130000E-15  289.400000E-18 
+          NE    1.4             1.4          
+          BR   20.57            8.29         
+          NR     .9849           .9931       
+         VAR   11.62           17.9          
+         IKR     .054            .09         
+         ISC  506.200000E-15    9.982000E-12 
+          NC    1.295           1.763        
+         ISS    0               0            
+          RB    1              10            
+         RBM     .5             5            
+         IRB    1.000000E-06    5.000000E-06 
+          RE     .1415           .649        
+          RC     .2623           .7014       
+         CJE   51.140000E-12   12.440000E-12 
+         VJE     .8911           .7579       
+         MJE     .4417           .3656       
+         CJC   26.560000E-12    3.347000E-12 
+         VJC     .62             .5463       
+         MJC     .4836           .391        
+        XCJC     .459            .6193       
+         CJS    0               0            
+         VJS     .75             .75         
+         MJS     .333            .333        
+          FC     .99             .979        
+          TF  735.900000E-12  490.800000E-12 
+         XTF    1.859           9.51         
+         VTF    3.813           2.927        
+         ITF     .4393           .3131       
+          TR   50.000000E-09   90.000000E-09 
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.42         
+           D     .52             .87         
+
+
+
+          JOB CONCLUDED
+
+**** 11/22/24 16:04:47 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Iomax"  [ C:\Users\denis\Desktop\P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD\Schematics\PROIECT_OrCAD\p1_202
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .19
+

@@ -1,0 +1,25 @@
+** Profile: "SCHEMATIC1-Iomax"  [ C:\Users\denis\Desktop\P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD\Schematics\PROIECT_OrCAD\p1_2024_432e_angelescu_denisa_sers_n1_orcad-pspicefiles\schematic1\iomax.sim ] 
+
+** Creating circuit file "Iomax.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Users/denis/Desktop/P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD/Schematics/lib_modelepspice_anexa_1/modele_a1_lib/bc807-25"
++ ".lib" 
+.LIB "C:/Users/denis/Desktop/P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD/Schematics/lib_modelepspice_anexa_1/modele_a1_lib/bc846b.l"
++ "ib" 
+.LIB "C:/Users/denis/Desktop/P1_2024_432E_Angelescu_Denisa_SERS_N1_OrCAD/Schematics/lib_modelepspice_anexa_1/modele_a1_lib/bzx84c2v"
++ "7.lib" 
+* From [PSPICE NETLIST] section of C:\Users\denis\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\24.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN I_I1 0 1 0.001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
